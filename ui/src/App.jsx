@@ -2,6 +2,7 @@ import { Routes, Route, NavLink, Navigate } from "react-router-dom";
 
 import UserList from "./components/UserList";
 import AddUser from "./components/AddUser";
+import CharacterList from "./components/character/CharacterList";
 
 function App() {
   return (
@@ -15,11 +16,16 @@ function App() {
         <NavLink className="nav-link" to="/add-user">
           Add User
         </NavLink>
+        <br />
+        <NavLink className="nav-link" to="/characters">
+          Characters
+        </NavLink>
       </nav>
 
       <Routes>
         <Route path="/users" element={<UserList />} />
         <Route path="/add-user" element={<AddUser />} />
+        <Route path="/characters" element={<CharacterList />} />
       </Routes>
     </div>
   );
